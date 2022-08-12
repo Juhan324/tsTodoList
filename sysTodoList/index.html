@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>ToDo List</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <div>
+        <p>할 일 입력</p>
+        <input type="text" id="insert">
+        <button onclick="insertTodo()">등록</button>
+    </div>
+    <div>
+        <table>
+            <tr id = "todoList">
+                <td>완료 여부</td>
+                <td>ToDo</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" value="할일"></td>
+                <td>할일1</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
