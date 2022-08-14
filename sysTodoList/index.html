@@ -9,23 +9,21 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>ToDo List</h1>
-    <div>
-        <p>할 일 입력</p>
-        <input type="text" id="insert">
-        <button onclick="insertTodo()">등록</button>
-    </div>
-    <div>
-        <table>
-            <tr id = "todoList">
-                <td>완료 여부</td>
-                <td>ToDo</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" value="할일"></td>
-                <td>할일1</td>
-            </tr>
-        </table>
+    <div id = "outer">
+        <h1>ToDo List</h1>
+        <div id = "insertForm">
+            <p id = "insertTitle">ToDo 입력</p>
+                <input type="text" id="insert">
+                <button onclick="insertTodo()">등록</button>
+        </div>
+        <div id = "listForm">
+            <table>
+                <tr id="todoList" class = "table">
+                    <td class="complete">완료</td>
+                    <td class="todo">ToDo</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>

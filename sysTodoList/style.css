@@ -1,0 +1,56 @@
+#outer {
+    text-align: center;
+}
+
+#insertTitle {
+    margin-top: 0px;
+}
+
+#insertForm {
+    display: inline-block;
+    border: 0px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #B9EEFF;
+    width: 70%;
+}
+
+#insert {
+    width: 100px;
+}
+
+button {
+    border: 0px solid black;
+    width: 50px;
+}
+
+#listForm {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+}
+
+table {
+    display: inline-block;
+    text-align: center;
+    margin: 0px;
+}
+
+
+tr {
+    width: 100%;
+}
+
+td {
+    border : 1px solid black;
+}
+
+.complete {
+    min-width: 35px;
+    width: 10%;
+}
+
+.todo {
+    width: 90%;
+}
