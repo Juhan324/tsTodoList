@@ -13,11 +13,11 @@
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: #B9EEFF;
-    width: 70%;
+    width: 25%;
 }
 
 #insert {
-    width: 100px;
+    width: 150px;
 }
 
 button {
@@ -27,7 +27,7 @@ button {
 
 #listForm {
     display: inline-block;
-    width: 70%;
+    width: 75%;
     padding: 10px;
 }
 
