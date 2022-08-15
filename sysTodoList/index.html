@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <title>ToDo List</title>
-    <script src="script.js"></script>
-    
+    <title>ToDo List</title>    
 </head>
 <body>
     <div id = "outer">
@@ -15,7 +13,7 @@
         <div id = "insertForm">
             <p id = "insertTitle">ToDo 입력</p>
                 <input type="text" id="insert" placeholder="일정을 입력해주세요.">
-                <button onclick="insertTodo()">등록</button>
+                <input type="button" id="insertButton" onclick="insertTodo()" value="등록">
         </div>
         <div id = "listForm">
             <table>
@@ -26,8 +24,6 @@
             </table>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-<script>
-    readTodo();
-</script>
 </html>

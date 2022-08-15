@@ -8,7 +8,7 @@
 
 #insertForm {
     display: inline-block;
-    border: 0px solid black;
+    border: 0px;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -17,12 +17,14 @@
 }
 
 #insert {
-    width: 150px;
+    width: 40%
 }
 
-button {
-    border: 0px solid black;
-    width: 50px;
+#insertButton {
+    border: 0px;
+    width: 20%;
+    min-width: 40px;
+    margin-top: 10px;
 }
 
 #listForm {
@@ -37,11 +39,6 @@ table {
     margin: 0px;
 }
 
-
-tr {
-    width: 100%;
-}
-
 td {
     border : 1px solid black;
 }
@@ -49,8 +46,10 @@ td {
 .complete {
     min-width: 35px;
     width: 10%;
+    margin: 0px;
 }
 
 .todo {
     width: 90%;
+    margin: 0px;
 }

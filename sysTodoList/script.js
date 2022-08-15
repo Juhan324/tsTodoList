@@ -49,3 +49,5 @@ function initialize(item) {
         td.style.color="grey";
     }
 }
+
+document.addEventListener('DOMContentLoaded', readTodo(), false);
