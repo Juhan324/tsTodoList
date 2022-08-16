@@ -1,3 +1,4 @@
+
 function autoincrement(){
     if(localStorage.getItem("number") == null){
         localStorage.setItem("number", 0);
@@ -60,7 +61,6 @@ function initialize(key, item) {
 
     let checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.className = "checkbox";
     checkbox.ariaLabel = item2.value;
 
     checkbox.onchange = function() {
