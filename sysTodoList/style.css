@@ -1,10 +1,14 @@
+h1 {
+    font-size: 40px;
+}
+
 #outer {
     text-align: center;
 }
 
 #insertTitle {
     margin-top: 0px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 #insertDiv {
@@ -23,7 +27,7 @@
 }
 
 #insert {
-    height: 25px;
+    height: 35px;
     width: 40vw;
 }
 
@@ -34,7 +38,7 @@
     min-width: 40px;
     max-width: 100px;
     margin-top: 10px;
-    height: 30px;
+    height: 40px;
 }
 
 #listForm {
