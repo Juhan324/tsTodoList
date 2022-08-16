@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>ToDo List</title>    
 </head>
 <body>
     <div id = "outer">
-        <h1>ToDo List</h1>
-        <div id = "insertForm">
-            <p id = "insertTitle">ToDo 입력</p>
-                <input type="text" id="insert" placeholder="일정을 입력해주세요.">
-                <input type="button" id="insertButton" onclick="insertTodo()" value="등록">
-        </div>
+        <form onsubmit="insertTodo()" id="insertForm">
+            <h1>ToDo List</h1>
+            <div id = "insertDiv">
+                <p id = "insertTitle">ToDo 입력</p>
+                    <input type="text" id="insert" placeholder="일정을 입력해주세요.">
+                    <input type="submit" id="insertButton" value="등록">
+            </div>
+        </form>
         <div id = "listForm">
             <table>
-                <tr id="todoList" class = "table">
+                <tr id="todoList">
                     <td class="complete">완료</td>
-                    <td class="todo">ToDo List</td>
+                    <td class="todo" colspan="2">ToDo List</td>
                 </tr>
             </table>
         </div>
