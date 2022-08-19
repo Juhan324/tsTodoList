@@ -55,6 +55,7 @@ table {
 
 td {
     border : 0px;
+    max-width: 80vw;
     height: 50px;
     font-size: 20px;
     background-color: aliceblue;
@@ -88,6 +89,7 @@ td {
     background-color: aliceblue;
     color: red;
     font-size:15px;
+    max-width: 100px;
 }
 
 .todoList {
@@ -114,10 +116,6 @@ td {
     color: grey;
 }
 
-.unchecked {
-    text-decoration-line: none;
-    color: black;
-}
 
 .button {
     cursor: pointer;

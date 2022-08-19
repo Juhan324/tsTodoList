@@ -18,13 +18,16 @@ function insertTodo(){
         return false;
     }
     for(let i = 0; i < localStorage.length; i++){
-        if(insert.value == localStorage.getItem(localStorage.key(i))){
+        if(insert.value == JSON.parse(localStorage.getItem(localStorage.key(i))).value){
             alert("이미 입력된 일정입니다.");
             return false;
         }
     }
-    localStorage.setItem(autoincrement(), JSON.stringify(insert));
+    let key = autoincrement();
+    localStorage.setItem(key, JSON.stringify(insert));
+    initialize(key, JSON.stringify(insert));
     document.getElementById("insert").value="";
+    return false;
 };
 
 
@@ -52,7 +55,7 @@ function readTodo() {
 
 
 function initialize(key, item) {
-    var item2 = JSON.parse(item);
+    let item2 = JSON.parse(item);
     let td = document.createElement("td");
     td.id = item2.value;
     td.className = "todoList";
@@ -66,11 +69,11 @@ function initialize(key, item) {
     checkbox.onchange = function() {
         if(checkbox.checked){
             item2.checked = true;
-            document.getElementById(item2.value).className = "checked";
+            document.getElementById(item2.value).classList.add("checked");
             localStorage.setItem(key, JSON.stringify(item2));
         }else {
             item2.checked = false;
-            document.getElementById(item2.value).className = "unchecked";
+            document.getElementById(item2.value).classList.remove("checked");
             localStorage.setItem(key, JSON.stringify(item2));
         }
     };
@@ -100,15 +103,15 @@ function initialize(key, item) {
 
     if(item2.checked == true) {
         checkbox.checked = true;
-        document.getElementById(item2.value).className = "checked";
+        document.getElementById(item2.value).classList.add("checked");
     }
 }
 
 
 
 function deleteTodo(item) {
-    var del = item.currentTarget.id.slice(0,-6);
-    for(var i=0; i<localStorage.length; i++){
+    let del = item.currentTarget.id.slice(0,-6);
+    for(let i=0; i<localStorage.length; i++){
         if(JSON.parse(localStorage.getItem(localStorage.key(i))).value == del){
             localStorage.removeItem(localStorage.key(i));
             document.getElementById(del+"list").remove();
