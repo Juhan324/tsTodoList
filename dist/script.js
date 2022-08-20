@@ -1,3 +1,4 @@
+"use strict";
 function autoincrement() {
     if (localStorage.getItem("number") == null) {
         localStorage.setItem("number", "0");
