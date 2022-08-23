@@ -92,6 +92,12 @@ function initialize(key, item) {
         document.getElementById(item2.value).classList.add("checked");
     }
 }
+function test(number) {
+    for (var i = 0; i < number; i++) {
+        document.getElementById("insert").value = i.toString();
+        insertTodo();
+    }
+}
 function deleteTodo(item) {
     var del = item.target.id.slice(0, -6);
     for (var i = 0; i < localStorage.length; i++) {

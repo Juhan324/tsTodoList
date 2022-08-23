@@ -116,6 +116,13 @@ function initialize(key : string, item : string) : void{
     }
 }
 
+function test(number:Number) {
+    for(let i=0; i<number; i++){
+        (<HTMLInputElement>document.getElementById("insert")).value = i.toString();
+        insertTodo();
+    }
+}
+
 
 
 function deleteTodo(item : MouseEvent) : void{
