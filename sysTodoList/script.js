@@ -24,7 +24,7 @@ function insertTodo() {
     var key = autoincrement();
     localStorage.setItem(key, JSON.stringify(insert));
     initialize(key, JSON.stringify(insert));
-    insertValue = "";
+    document.getElementById("insert").value = "";
     return false;
 }
 ;
@@ -56,16 +56,16 @@ function initialize(key, item) {
     checkbox.type = "checkbox";
     checkbox.className = "checkbox";
     checkbox.ariaLabel = item2.value;
-    var elementCheckbox = document.getElementById(item2.value);
     checkbox.onchange = function () {
+        var checkboxTd = document.getElementById(item2.value);
         if (checkbox.checked) {
             item2.checked = true;
-            elementCheckbox.classList.add("checked");
+            checkboxTd.classList.add("checked");
             localStorage.setItem(key, JSON.stringify(item2));
         }
         else {
             item2.checked = false;
-            elementCheckbox.classList.remove("checked");
+            checkboxTd.classList.remove("checked");
             localStorage.setItem(key, JSON.stringify(item2));
         }
     };
@@ -93,10 +93,13 @@ function initialize(key, item) {
     }
 }
 function test(number) {
+    var startTime = new Date().getTime();
     for (var i = 0; i < number; i++) {
         document.getElementById("insert").value = i.toString();
         insertTodo();
     }
+    var endTime = new Date().getTime();
+    console.log(endTime - startTime);
 }
 function deleteTodo(item) {
     var del = item.target.id.slice(0, -6);
